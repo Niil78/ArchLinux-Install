@@ -15,20 +15,20 @@ echo -e 'y (Para aceptar los cambios y luego ENTER)'
 sleep 10
 echo -e 'Crear particion GPT'
 gdisk /dev/sda
-echo -e '1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M ENTER W Y'
+echo -e 'Default \e[91mLight red 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M ENTER W Y'
 gdisk /dev/sda
 clear
-echo -e '2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G ENTER W Y '
+echo -e 'Default \e[91mLight red 2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G ENTER W Y '
 gdisk /dev/sda
 clear
-echo -e '3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G ENTER W Y'
+echo -e 'Default \e[91mLight red 3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G ENTER W Y'
 gdisk /dev/sda
 clear
-echo -e '4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER ENTER W Y'
+echo -e 'Default \e[91mLight red 4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER ENTER W Y'
 gdisk /dev/sda
 clear
-echo -e 'Listo Particionado finalizado'
+echo -e 'Default \e[92mLight greenListo Particionado finalizado'
 lsblk
-echo -e 'Ejecutando formato'
+echo -e 'Default \e[92mLight green Ejecutando formato'
 chmod +x arch-formato.sh
 sh arch-formato.sh
