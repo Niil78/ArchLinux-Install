@@ -12,5 +12,9 @@ passwd pepe
 echo -e 'Default \e[91mContraseña root'
 passwd
 echo -e 'Default \e[91mConfiguracion basica minima lista'
-
+#
+#KDE - PLASMA - INSTALACION
+#
+chmod +x KDE.sh
+sh KDE.sh
 exit
