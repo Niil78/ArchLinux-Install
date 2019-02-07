@@ -1,16 +1,23 @@
 # Aqui van algunas aplicaciones que suelo utilizar. 
 # Gestores de paquetes comprimidos 
 echo -e 'Gestores de paquetes y carptas'
-pacman -Syyu --noconfirm p7zip p7zip-plugins unrar tar rsync ark steghide thunnar
+sudo pacman -Syyu --noconfirm p7zip unrar tar rsync ark steghide thunar
+sleep 4
+clear
 # Arduino y otras herramientas
 echo -e 'Arduino y otras herramientas'
-pacman -S --noconfirm notepad arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core
+sudo pacman -S --noconfirm notepadqq arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core
+sleep 4
+clear
 # Herramientas basicas
 echo -e 'Herramientas basicas'
-pacman -S --noconfirm terminator screen filezilla alsi archey3 KSystemLog libreoffice firefox opera dropbox iptraf
+sudo pacman -S --noconfirm terminator screen filezilla archey3 ksystemlog libreoffice firefox opera rclone iptraf-ng
+sleep 4
+clear
 # 3D printer
-pacman -S --noconfirm cura curaengine cura-binary-data
-
+sudo pacman -S --noconfirm cura curaengine cura-binary-data
+sleep 4
+clear
 #
 # YAY GESTOR AYUDANTE DE PACMAN
 #
