@@ -10,6 +10,9 @@ cd yay
 sudo makepkg -si
 yay -Syu
 cd ..
+echo -e 'Yay instalado correctamente'
+sleep 4
+clear
 #
 # PAKKU GESTOR AYUDANTE DE PACMAN
 #
@@ -18,4 +21,7 @@ cd pakku
 sudo makepkg -si
 pakku -Syu
 cd ..
+echo -e 'Pakku instalado correctamente'
+sleep 4
+clear
 echo -e 'Finalizado'
