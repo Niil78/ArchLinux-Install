@@ -18,17 +18,4 @@ clear
 sudo pacman -S --noconfirm cura curaengine cura-binary-data
 sleep 4
 clear
-#
-# YAY GESTOR AYUDANTE DE PACMAN
-#
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-yay -Syu
-#
-# PAKKU GESTOR AYUDANTE DE PACMAN
-#
-git clone https://aur.archlinux.org/pakku.git
-cd pakku
-makepkg -si
-pakku -Syu
+echo -e 'finalizado'
