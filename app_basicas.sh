@@ -11,7 +11,7 @@ sleep 4
 clear
 # Herramientas basicas
 echo -e 'Herramientas basicas'
-sudo pacman -S --noconfirm terminator screen filezilla archey3 ksystemlog libreoffice firefox opera rclone iptraf-ng
+sudo pacman -S --noconfirm terminator screen filezilla archey3 ksystemlog libreoffice firefox opera rclone iptraf-ng kdeconnect
 sleep 4
 clear
 # 3D printer
