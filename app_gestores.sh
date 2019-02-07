@@ -1,3 +1,5 @@
+echo -e 'Instalacion dependencias previas'
+pacman -Qg base-devel
 #
 # YAY GESTOR AYUDANTE DE PACMAN
 #
