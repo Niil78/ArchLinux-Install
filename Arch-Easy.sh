@@ -4,7 +4,7 @@
 echo -e 'tienes que estar comnectado a internet.'
 echo -e 'vamos a abrir los mirrors y pacman, por si tenemos que hacer cambios'
 nano /etc/pacman.conf
-nano /etc/pacman.d/mirrors
+nano /etc/pacman.d/mirrorlist
 echo -e 'Efivars'
 ls /sys/firmware/efi/efivars
 sleep 5
