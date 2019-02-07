@@ -24,7 +24,3 @@ lsblk
 echo -e 'ejecutando particiones'
 chmod +x arch-particiones.sh
 sh arch-particiones.sh
-
-umount -R /mnt
-swapoff /dev/sda2
-reboot
