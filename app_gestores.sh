@@ -1,5 +1,7 @@
 echo -e 'Instalacion dependencias previas'
 pacman -Qg base-devel
+sleep 1
+pacman -S --noconfirm base-devel
 #
 # YAY GESTOR AYUDANTE DE PACMAN
 #
