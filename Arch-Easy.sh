@@ -78,4 +78,5 @@ echo -e 'Generar fstab'
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 echo -e 'Bienvenido a tu pequeña instalacion parte2.sh '
+mv parte2.sh /mnt
 arch-chroot /mnt /bin/bash 
