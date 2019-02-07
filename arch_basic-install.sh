@@ -17,4 +17,5 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #
 chmod +x KDE.sh
 sh KDE.sh
+#Al salir continua el script no toques nada
 exit
