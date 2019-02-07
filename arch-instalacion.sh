@@ -12,6 +12,9 @@ sleep 5
 mv instalacion2.sh /mnt
 echo -e 'Default \e[91mBienvenido a tu pequeña instalacion'
 arch-chroot /mnt /bin/bash 
+#
+#
+#
 echo -e 'Holiiiii, Yo me encargo'
 sleep 1
 lsblk
