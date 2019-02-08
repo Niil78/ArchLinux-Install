@@ -13,6 +13,7 @@ clear
 echo -e 'Herramientas basicas'
 sudo pacman -S --noconfirm terminator screen filezilla archey3 ksystemlog libreoffice firefox opera rclone iptraf-ng kdeconnect
 sudo pacman -S --noconfirm weechat teamspeak openvpn inkscape ardour pacmatic arpwatch ntop htop tcpdump
+sudo pacman -S --noconfirm  john nmap ettercap-gtk hydra nikto sqlmap ifuse aircrack-ng wireshark-gtk teamviewer
 sleep 4
 clear
 # 3D printer
