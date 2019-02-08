@@ -9,4 +9,6 @@ echo -e 'Otras'
 yay -S linphone sipp esniper
 echo -e '3D'
 yay -S brlcad freecad 
+echo -e 'github-desktop'
+yay -S github-desktop
 
