@@ -1,5 +1,5 @@
 echo -e 'Instalacion dependencias previas'
-pacman -Qg base-devel 
+pacman -Qg base-devel
 sleep 1
 pacman -S --noconfirm git base-devel
 #
@@ -24,4 +24,5 @@ cd ..
 echo -e 'Pakku instalado correctamente'
 sleep 4
 clear
+rm -rf yay pakku
 echo -e 'Finalizado'
