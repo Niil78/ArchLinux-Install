@@ -8,6 +8,8 @@ clear
 echo -e 'Arduino y otras herramientas'
 sudo pacman -S --noconfirm notepadqq arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core
 sleep 4
+echo -e 'Bluetooth y otras'
+sudo pacman -S --noconfirm bluez bluedevil bluez-utils pulseaudio-bluetooth
 clear
 # Herramientas basicas
 echo -e 'Herramientas basicas'
