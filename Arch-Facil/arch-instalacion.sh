@@ -13,9 +13,11 @@ mv arch_basic-install.sh /mnt
 mv arch_full-install.sh /mnt
 echo -e 'Recuerda darle permisos chmod +x al script'
 echo -e 'Default \e[91mBienvenido a tu pequeña instalacion'
-arch-chroot /mnt /bin/bash 
+arch-chroot /mnt /bin/bash
+sleep 3
+
 #
-#
+# Esto puede fallar :/
 #
 echo -e 'Holiiiii, Yo me encargo'
 sleep 1
