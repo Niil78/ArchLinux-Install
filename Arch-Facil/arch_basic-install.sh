@@ -15,7 +15,7 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #
 #KDE - PLASMA - INSTALACION
 #
-chmod +x KDE.sh
-sh KDE.sh
+chmod +x app-kdeplasma.sh
+sh app-kdeplasma.sh
 #Al salir continua el script no toques nada
 exit
