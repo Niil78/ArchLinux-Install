@@ -9,7 +9,6 @@ echo NStation > /etc/hostname
 echo -e 'Default \e[91mCreando un Usuario'
 echo -e 'Por defecto voy a crear a pepe'
 useradd -m pepe
-passwd pepe
 echo -e 'Default \e[91mContraseña root'
 passwd
 echo -e 'Passwd para pepe'
@@ -19,29 +18,36 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #KDE - PLASMA - INSTALACION
 #
 echo -e 'Instalando Plasma :D'
-chmod +x app-kdeplasma.sh
-sh app-kdeplasma.sh
+chmod +x Aplicaciones/app-kdeplasma.sh
+sh /Aplicaciones/app-kdeplasma.sh
 clear
+#
+#APP BASICAS
+#
 echo  -e 'Aplicaciones Basicas'
-echo -e app_basicas.sh
-chmod +x app_basicas.sh
-sh app_basicas.sh
+chmod +x Aplicaciones/app_basicas.sh
+sh Aplicaciones/app_basicas.sh
 clear
+#
+#GESTORES
+#
 echo -e 'Gestores'
-echo -e app_gestores.sh
-chmod +x app_gestores.sh
-sh app_gestores.sh
+chmod +x Aplicaciones/app_gestores.sh
+sh Aplicaciones/app_gestores.sh
 clear
+#
+# Aplicaciones
+#
 echo -e 'ahora tocan las herramientas, esto puede tardar un poco bastante.'
 echo -e 'corre a por un cargador para el portatil por si fuera necesario.'
 echo -e 'esto puede tardar algunas horas en terminar'
 sleep 3
-chmod +x yay-app.sh
-sh yay-app.sh
+chmod +x Gestores/yay-app.sh
+sh Gestores/yay-app.sh
 echo -e 'Hemos terminado con Yay. Ahora toca Pakku'
 sleep 2
-chmod +x pakku-app.shh
-sh pakku-app.sh
+chmod +x Aplicaciones/pakku-app.shh
+sh Aplicaciones/pakku-app.sh
 echo -e 'Pakku a terminado.'
 echo -e 'Finalizado'
 #Al salir continua el script no toques nada

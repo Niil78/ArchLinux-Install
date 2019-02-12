@@ -7,6 +7,7 @@ echo NStation > /etc/hostname
 #USUARIO
 #
 echo -e 'Default \e[91mCreando un Usuario'
+echo -e 'Por defecto voy a crear a pepe'
 useradd -m pepe
 passwd pepe
 echo -e 'Default \e[91mContraseña root'
@@ -15,7 +16,7 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #
 #KDE - PLASMA - INSTALACION
 #
-chmod +x app-kdeplasma.sh
-sh app-kdeplasma.sh
+chmod +x Aplicaciones/app-kdeplasma.sh
+sh Aplicaciones/app-kdeplasma.sh
 #Al salir continua el script no toques nada
 exit
