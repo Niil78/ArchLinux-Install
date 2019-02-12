@@ -30,23 +30,22 @@ while [ opt != '' ]
         case $opt in
         1) clear;
         option_picked "ArchLinux Basico";
-        chmod +x arch_Easy.sh;
-        chmod +x arch_basic-install.sh
-		    sh MetaSploit/install.sh;
+        chmod +x arch_facil/arch_Easy.sh;
+        chmod +x arch_facil/arch_basic-install.sh
         sh arch_Easy.sh;
         #show_menu;
         ;;
         2) clear;
         option_picked "ArchLinux Completo";
-        chmod +x arch_Easy.sh;
-        chmod +x arch_full-install.sh;
+        chmod +x arch_facil/arch_Easy.sh;
+        chmod +x arch_facil/arch_full-install.sh;
         sh arch_Easy.sh;
         #show_menu;
         ;;
         3) clear;
         option_picked "Solo Aplicaciones";
-        chmod +x MetaSploit/install.sh;
-        sh DeepExploit/install.sh;
+        chmod +x Aplicaciones/app_gestores.sh;
+        sh Aplicaciones/app_gestores;
         show_menu;
             ;;
         x)exit;

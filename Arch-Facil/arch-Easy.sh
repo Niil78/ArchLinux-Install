@@ -13,6 +13,8 @@ nano /etc/pacman.d/mirrorlist
 echo -e 'Default \e[92mConfirmamos version EFI'
 ls /sys/firmware/efi/efivars
 sleep 5
+loadkeys es
+KEY_MAP="es"
 clear
 echo -e 'Default \e[92mPoniendo la hora'
 timedatectl set-ntp true
