@@ -31,14 +31,14 @@ while [ opt != '' ]
         1) clear;
         option_picked "ArchLinux Basico";
         chmod +x Arch-Facil/arch-Easy.sh;
-        chmod +x Arch-Facil/arch-basic-install.sh;
+        chmod +x Arch-Facil/arch_basic-install.sh;
         sh ./Arch-facil/arch_Easy.sh;
         #show_menu;
         ;;
         2) clear;
         option_picked "ArchLinux Completo";
         chmod +x Arch-Facil/arch-Easy.sh;
-        chmod +x Arch-Facil/arch-full-install.sh;
+        chmod +x Arch-Facil/arch_full-install.sh;
         sh .Arch-facil/arch_Easy.sh;
         #show_menu;
         ;;
