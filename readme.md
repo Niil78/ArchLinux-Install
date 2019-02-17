@@ -15,4 +15,6 @@ Uso libre para todo el mundo.
 git clone https://github.com/niil78/ArchLinux-install && chmod +x menu.sh && sh menu.sh
 
 La instalación completa tarda aproximadamente 2H en terminar.
+
+
 La instalación básica tarda aproximadamente 15 minutos en terminar.
