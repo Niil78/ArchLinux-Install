@@ -23,5 +23,5 @@ echo -e 'recordamos que SWAP ya fue marcado ON'
 sleep 5
 clear
 echo -e 'ejecutando instalacion base'
-chmod +x Arch-facil/arch-instalacion.sh
-sh Arch-facil/arch-instalacion.sh
+chmod +x root/ArchLinux-install/install/arch-instalacion.sh
+sh root/ArchLinux-install/install/arch-instalacion.sh

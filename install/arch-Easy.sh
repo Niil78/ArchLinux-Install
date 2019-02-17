@@ -24,5 +24,5 @@ clear
 echo -e 'Default \e[92mListamos los discos duros'
 lsblk
 echo -e 'ejecutando particiones'
-chmod +x Arch-Facil/arch-particiones.sh
-sh Arch-Arch_Facil/arch-particiones.sh
+chmod +x root/ArchLinux-install/install/arch-particiones.sh
+sh root/ArchLinux-install/install/arch-particiones.sh
