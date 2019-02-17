@@ -14,6 +14,7 @@ passwd
 echo -e 'Passwd para pepe'
 passwd pepe
 echo -e 'Default \e[91mConfiguracion basica minima lista'
+echo -e 'Pero esto continua'
 #
 #KDE - PLASMA - INSTALACION
 #
@@ -40,7 +41,7 @@ clear
 #
 echo -e 'ahora tocan las herramientas, esto puede tardar un poco bastante.'
 echo -e 'corre a por un cargador para el portatil por si fuera necesario.'
-echo -e 'esto puede tardar algunas horas en terminar'
+echo -e 'esto puede tardar algunas horas en terminar.'
 sleep 3
 chmod +x Gestores/yay-app.sh
 sh Gestores/yay-app.sh
@@ -51,8 +52,7 @@ sh root/Aplicaciones/pakku-app.sh
 echo -e 'Pakku a terminado.'
 echo -e 'Finalizado'
 #Al salir continua el script no toques nada
-echo -e 'Al salir continua el script no toques nada'
-echo -e 'espera 5 segundos mas'
+echo -e 'ejecuta finalizar.sh'
 sleep 5
 echo -e '¡Rocket Launch!'
 #Al salir continua el script no toques nada
