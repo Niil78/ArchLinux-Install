@@ -30,7 +30,7 @@ while [ opt != '' ]
         case $opt in
         1) clear;
         option_picked "ArchLinux Basico";
-        cd Arch_Facil/
+        cd root/archlinux-intall/install/
         chmod +x root/ArchLinux-install/install/arch-Easy.sh;
         chmod +x root/ArchLinux-install/install/arch_basic-install.sh;
         sh root/ArchLinux-install/install/arch_Easy.sh;
@@ -38,7 +38,7 @@ while [ opt != '' ]
         ;;
         2) clear;
         option_picked "ArchLinux Completo";
-        cd Arch_Facil/
+        cd root/archlinux-intall/install/
         chmod +x root/ArchLinux-install/install/arch-Easy.sh;
         chmod +x root/ArchLinux-install/install/arch_full-install.sh;
         sh root/ArchLinux-install/install/arch-Easy.sh;
