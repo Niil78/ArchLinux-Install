@@ -6,15 +6,15 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 clear
 echo -e 'ahora pasara a root en su version instalada'
-echo -e 'ahora tiene que: chmod +x instalacion2.sh.
+echo -e 'ahora tiene que: chmod +x instalacion2.sh'
 echo -e 'Default \e[91mLa instalacion continuara con normalidad'
-sleep 5
+sleep 2
 mv arch_basic-install.sh /mnt
 mv arch_full-install.sh /mnt
 echo -e 'Recuerda darle permisos chmod +x al script'
 echo -e 'Default \e[91mBienvenido a tu pequeña instalacion'
 arch-chroot /mnt /bin/bash
-sleep 3
+sleep 2
 
 #
 # Esto puede fallar :/
@@ -26,5 +26,5 @@ umount -R /mnt
 lsblk
 swapoff /dev/sda2
 echo -e 'el swap tambien'
-sleep 2
+sleep 1
 reboot

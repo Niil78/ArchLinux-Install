@@ -20,8 +20,9 @@ mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 echo -e 'Default \e[92m/home - listo'
 echo -e 'recordamos que SWAP ya fue marcado ON'
-sleep 5
+sleep 2
 clear
 echo -e 'ejecutando instalacion base'
 chmod +x arch-instalacion.sh
+sleep 1
 sh arch-instalacion.sh

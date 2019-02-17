@@ -4,7 +4,7 @@ echo -e '/dev/sda -> /boot[512M]'
 echo -e '/dev/sda -> /swap[4G]'
 echo -e '/dev/sda -> /root[50G]'
 echo -e '/dev/sda -> /Home[resto]'
-sleep 15
+sleep 1
 echo -e 'n (Crea una nueva partición)'
 echo -e 'Dejar número de la partición por defecto, presionando ENTER'
 echo -e 'Dejar por defecto el sector inicial, presionando ENTER'
@@ -12,7 +12,7 @@ echo -e 'Para el sector final, escribir +TAMAÑO y presionar ENTER'
 echo -e 'Escribir TIPO cuando se pida código de partición y luego ENTER'
 echo -e 'w (Para escribir los cambios y luego ENTER)'
 echo -e 'y (Para aceptar los cambios y luego ENTER)'
-sleep 10
+sleep 5
 echo -e 'Crear particion GPT'
 gdisk /dev/sda
 echo -e 'Default \e[91mLight red 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M ENTER W Y'
