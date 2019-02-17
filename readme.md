@@ -12,10 +12,7 @@ Uso libre para todo el mundo.
 
 
 <h1>Como usarlo:</h1>
-git clone https://github.com/niil78/ArchLinux-install
--  #  chmod +x menu.sh
-  - #  sh menu.sh
-Elige la opción que mas se ajuste a tu preferencia.
+git clone https://github.com/niil78/ArchLinux-install && chmod +x menu.sh && sh menu.sh
 
 La instalación completa tarda aproximadamente 2H en terminar.
 La instalación básica tarda aproximadamente 15 minutos en terminar.
