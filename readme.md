@@ -4,10 +4,17 @@ aconsejo leer el código de particiones.sh
 para poder configurarlo a tu gusto.                              
 Uso libre para todo el mundo.
 
+| Exec             | UTILIDAD                          | DURACION |
+| ---------------- |:---------------------------------:| --------:|
+| Arch-easy.sh     | Inicia instalación                | 10MIN    |
+| Aplicaciones.sh  | Instalación herramientas          | 2MIN     |
+| Gestores.sh      | Instalación Gestores&Herramientas | 1/2HORAS |
+
+
 <h1>Como usarlo:</h1>
 git clone https://github.com/niil78/ArchLinux-install
-  #  chmod +x menu.sh
-  #  sh menu.sh
+-  #  chmod +x menu.sh
+  - #  sh menu.sh
 Elige la opción que mas se ajuste a tu preferencia.
 
 La instalación completa tarda aproximadamente 2H en terminar.
