@@ -1,15 +1,14 @@
-instalacion atomatizada sobre arch linux.                      
-La configuracion esta basicamente puesta para mi laptop        
-aconsejo leer el codigo de particiones.sh                  
+instalacion atomatizada arch linux.                      
+La configuración esta básicamente puesta para mi laptop        
+aconsejo leer el código de particiones.sh                  
 para poder configurarlo a tu gusto.                              
-Uso libre para todo el mundo.                           
+Uso libre para todo el mundo.
 
+<h1>Como usarlo:</h1>
+git clone https://github.com/niil78/ArchLinux-install
+  #  chmod +x menu.sh
+  #  sh menu.sh
+Elige la opción que mas se ajuste a tu preferencia.
 
-
-
-atomized installation on arch linux.                    
-The configuration is basically set for my laptop        
-I advise reading the partition code.                    
-to be able to configure it to your liking.              
-Free use for everyone.                                  
-
+La instalación completa tarda aproximadamente 2H en terminar.
+La instalación básica tarda aproximadamente 15 minutos en terminar.

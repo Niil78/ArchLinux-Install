@@ -41,19 +41,22 @@ echo -e 'Para el sector final, escribir +TAMAÑO y presionar ENTER'
 echo -e 'Escribir TIPO cuando se pida código de partición y luego ENTER'
 echo -e 'w (Para escribir los cambios y luego ENTER)'
 echo -e 'y (Para aceptar los cambios y luego ENTER)'
-sleep 5
+sleep 3
 echo -e 'Crear particion GPT'
+echo -e 'Pulsa estas teclas O-Y-W-Y para crear una particon GPT'
 gdisk /dev/sda
-echo -e 'Default \e[91m 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M ENTER W Y'
+sleep 1
+clear
+echo -e 'Default \e[91m 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M EF00 W Y'
 gdisk /dev/sda
 clear
-echo -e 'Default \e[91m 2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G ENTER W Y '
+echo -e 'Default \e[91m 2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G 8200 W Y '
 gdisk /dev/sda
 clear
-echo -e 'Default \e[91m 3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G ENTER W Y'
+echo -e 'Default \e[91m 3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G 8304 W Y'
 gdisk /dev/sda
 clear
-echo -e 'Default \e[91m 4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER ENTER W Y'
+echo -e 'Default \e[91m 4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER 8302 W Y'
 gdisk /dev/sda
 clear
 echo -e 'Default \e[92mListo Particionado finalizado'
