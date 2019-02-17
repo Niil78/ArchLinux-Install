@@ -23,5 +23,5 @@ echo -e 'recordamos que SWAP ya fue marcado ON'
 sleep 5
 clear
 echo -e 'ejecutando instalacion base'
-chmod +x install/arch-instalacion.sh
-sh install/arch-instalacion.sh
+chmod +x arch-instalacion.sh
+sh arch-instalacion.sh

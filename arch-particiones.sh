@@ -30,5 +30,5 @@ clear
 echo -e 'Default \e[92mLight greenListo Particionado finalizado'
 lsblk
 echo -e 'Default \e[92mLight green Ejecutando formato'
-chmod +x install/arch-formato.sh
-sh install/arch-formato.sh
+chmod +x arch-formato.sh
+sh arch-formato.sh
