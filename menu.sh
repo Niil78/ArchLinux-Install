@@ -30,24 +30,22 @@ while [ opt != '' ]
         case $opt in
         1) clear;
         option_picked "ArchLinux Basico";
-        cd root/archlinux-intall/install/
-        chmod +x root/ArchLinux-install/install/arch-Easy.sh;
-        chmod +x root/ArchLinux-install/install/arch_basic-install.sh;
-        sh root/ArchLinux-install/install/arch_Easy.sh;
+        chmod +x install/arch-Easy.sh;
+        chmod +x install/arch_basic-install.sh;
+        sh install/arch_Easy.sh;
         #show_menu;
         ;;
         2) clear;
         option_picked "ArchLinux Completo";
-        cd root/archlinux-intall/install/
-        chmod +x root/ArchLinux-install/install/arch-Easy.sh;
-        chmod +x root/ArchLinux-install/install/arch_full-install.sh;
-        sh root/ArchLinux-install/install/arch-Easy.sh;
+        chmod +x install/arch-Easy.sh;
+        chmod +x install/arch_full-install.sh;
+        sh install/arch-Easy.sh;
         #show_menu;
         ;;
         3) clear;
         option_picked "Solo Aplicaciones";
-        chmod +x root/ArchLinux-install/Aplicaciones/app_gestores.sh;
-        sh root/ArchLinux-install/Aplicaciones/app_gestores;
+        chmod +x Aplicaciones/app_gestores.sh;
+        sh Aplicaciones/app_gestores;
         show_menu;
             ;;
         x)exit;

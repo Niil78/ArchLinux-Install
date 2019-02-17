@@ -18,22 +18,22 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #KDE - PLASMA - INSTALACION
 #
 echo -e 'Instalando Plasma :D'
-chmod +x root/ArchLinux-install/Aplicaciones/app-kdeplasma.sh
+chmod +x Aplicaciones/app-kdeplasma.sh
 sh root/Aplicaciones/app-kdeplasma.sh
 clear
 #
 #APP BASICAS
 #
 echo  -e 'Aplicaciones Basicas'
-chmod +x root/ArchLinux-install/Aplicaciones/app_basicas.sh
-sh root/ArchLinux-install/Aplicaciones/app_basicas.sh
+chmod +x Aplicaciones/app_basicas.sh
+sh Aplicaciones/app_basicas.sh
 clear
 #
 #GESTORES
 #
 echo -e 'Gestores'
-chmod +x root/ArchLinux-install/Aplicaciones/app_gestores.sh
-sh root/ArchLinux-install/Aplicaciones/app_gestores.sh
+chmod +x Aplicaciones/app_gestores.sh
+sh Aplicaciones/app_gestores.sh
 clear
 #
 # Aplicaciones
@@ -42,11 +42,11 @@ echo -e 'ahora tocan las herramientas, esto puede tardar un poco bastante.'
 echo -e 'corre a por un cargador para el portatil por si fuera necesario.'
 echo -e 'esto puede tardar algunas horas en terminar'
 sleep 3
-chmod +x root/ArchLinux-install/Gestores/yay-app.sh
-sh root/ArchLinux-install/Gestores/yay-app.sh
+chmod +x Gestores/yay-app.sh
+sh Gestores/yay-app.sh
 echo -e 'Hemos terminado con Yay. Ahora toca Pakku'
 sleep 2
-chmod +x root/ArchLinux-install/Aplicaciones/pakku-app.shh
+chmod +x Aplicaciones/pakku-app.shh
 sh root/Aplicaciones/pakku-app.sh
 echo -e 'Pakku a terminado.'
 echo -e 'Finalizado'

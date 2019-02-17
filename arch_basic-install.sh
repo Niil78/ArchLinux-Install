@@ -16,7 +16,7 @@ echo -e 'Default \e[91mConfiguracion basica minima lista'
 #
 #KDE - PLASMA - INSTALACION
 #
-chmod +x root/ArchLinux-install/Aplicaciones/app-kdeplasma.sh
-sh root/ArchLinux-install/Aplicaciones/app-kdeplasma.sh
+chmod +x Aplicaciones/app-kdeplasma.sh
+sh Aplicaciones/app-kdeplasma.sh
 #Al salir continua el script no toques nada
 exit
