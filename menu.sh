@@ -32,7 +32,7 @@ while [ opt != '' ]
         option_picked "ArchLinux Basico";
         chmod +x arch-Easy.sh;
         chmod +x arch_basic-install.sh;
-        sh arch_Easy.sh;
+        sh arch-Easy.sh;
         #show_menu;
         ;;
         2) clear;
