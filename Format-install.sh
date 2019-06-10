@@ -1,16 +1,46 @@
+#################################
+## ARCH - LINUX BY:NIIL78       #
+#################################
+echo -e '{Bold}Bienvenido a la instalacion intectiva'
+echo -e '{Bold}By:Niil78'
+echo -e 'Tienes que estar conectado a internet'
+echo -e 'vamos a abrir los mirrors y pacman, por si tenemos que hacer cambios'
+echo -e 'Default \e[92mdeberias tener un espejo arriba cercano'
+sleep 5
+nano /etc/pacman.conf
+nano /etc/pacman.d/mirrorlist
+echo -e 'Default \e[92mConfirmamos version EFI'
+ls /sys/firmware/efi/efivars
+sleep 3
+loadkeys es
+KEY_MAP="es"
+clear
+echo -e 'Default \e[92mPoniendo la hora'
+timedatectl set-ntp true
+timedatectl status
+sleep 3
+clear
+echo -e 'Default \e[92mListamos los discos duros'
+lsblk
+sleep 3
 echo -e 'Formateando todas las particiones'
+sleep 1
 mkfs.fat -F32 /dev/sda1
 echo -e 'Default \e[92m/boot - formateado'
+sleep 2
 mkswap /dev/sda2
 echo -e 'Default \e[92m/swap - formateado'
+sleep 2
 swapon /dev/sda2
 echo -e 'Default \e[92m/SWAP ON'
+sleep 2
 mkfs.ext4 /dev/sda3
 echo -e 'Default \e[92m/root - formateado'
 mkfs.ext4 /dev/sda4
 echo -e 'Default \e[92m/home - formateado'
 echo -e 'Default \e[92mFormatos listos'
 echo -e 'Default \e[92mMontando particiones'
+sleep 2
 mount /dev/sda3 /mnt
 echo -e 'Default \e[92m/root - listo'
 mkdir -p /mnt/boot
@@ -20,7 +50,7 @@ mkdir -p /mnt/home
 mount /dev/sda4 /mnt/home
 echo -e 'Default \e[92m/home - listo'
 echo -e 'recordamos que SWAP ya fue marcado ON'
-sleep 2
+sleep 3
 clear
 echo -e 'ejecutando instalacion base'
 #chmod +x arch-instalacion.sh
