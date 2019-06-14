@@ -15,7 +15,7 @@ sleep 4
 clear
 # Arduino y otras herramientas
 echo -e 'Arduino y otras herramientas'
-sudo pacman -S --noconfirm notepadqq atom arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core
+sudo pacman -S --noconfirm notepadqq mtpfs kio-mtp atom arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core
 sleep 4
 echo -e 'Bluetooth y otras'
 sudo pacman -S --noconfirm bluez bluedevil bluez-utils pulseaudio-bluetooth
