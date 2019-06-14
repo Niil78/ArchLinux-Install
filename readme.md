@@ -4,11 +4,11 @@ aconsejo leer el código de particiones.sh
 para poder configurarlo a tu gusto.                              
 Uso libre para todo el mundo.
 
-| Exec             | UTILIDAD                          | DURACION |
-| ---------------- |:---------------------------------:| --------:|
-| Arch-easy.sh     | Inicia instalación                | 10MIN    |
-| Aplicaciones.sh  | Instalación herramientas          | 2MIN     |
-| Gestores.sh      | Instalación Gestores&Herramientas | 1/2HORAS |
+| CARPETAS                   | UTILIDAD                              | DURACION |
+| ---------------------------|:-------------------------------------:| --------:|
+| InstalacionSinFormatear    | Sobre Escribe una instalacion pasada  | 1Hora    |
+| InstalacionNueva           | Instalacion Completa nueva.           | 1.5Horas |
+| Extras                     | Instalación Gestores&Herramientas     | 1/2Horas |
 
 
 <h1>Como usarlo:</h1>

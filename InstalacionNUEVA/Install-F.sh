@@ -6,9 +6,7 @@ echo -e '\e[92m{Bold}By:Niil78\e[0m'
 echo -e '\e[92mTienes que estar conectado a internet\e[0m'
 echo -e '\e[92mVamos a abrir los mirrors y pacman, por si tenemos que hacer cambios\e[0m'
 echo -e '\e[92mDeberias tener un espejo arriba cercano\e[0m'
-echo -e '\e[92mEN ESTA INSTALACION NO SE CREARAN LAS PARTICIONES\e[0m'
-echo -e '\e[92mEN ESTA INSTALACION NO SE CREARAN LAS PARTICIONES\e[0m'
-echo -e '\e[92mEN ESTA INSTALACION NO SE CREARAN LAS PARTICIONES\e[0m'
+# Configuracion basica para iniciar la configuracion del sistema
 sleep 5
 timedatectl set-ntp true
 timedatectl status
@@ -28,6 +26,42 @@ sleep 1
 clear
 echo -e '\e[92mListamos los discos duros\e[0m'
 lsblk
+# Crear particiones nuevas
+echo -e '\e[91mLlego la hora de particionar\e[0m'
+echo -e '/dev/sda[120GB]'
+echo -e '/dev/sda -> /boot[512M]'
+echo -e '/dev/sda -> /swap[4G]'
+echo -e '/dev/sda -> /root[50G]'
+echo -e '/dev/sda -> /Home[resto]'
+sleep 1
+echo -e 'n (Crea una nueva partición)'
+echo -e 'Dejar número de la partición por defecto, presionando ENTER'
+echo -e 'Dejar por defecto el sector inicial, presionando ENTER'
+echo -e 'Para el sector final, escribir +TAMAÑO y presionar ENTER'
+echo -e 'Escribir TIPO cuando se pida código de partición y luego ENTER'
+echo -e 'w (Para escribir los cambios y luego ENTER)'
+echo -e 'y (Para aceptar los cambios y luego ENTER)'
+sleep 3
+echo -e 'Crear particion GPT'
+echo -e 'Pulsa estas teclas O-Y-W-Y para crear una particon GPT'
+gdisk /dev/sda
+sleep 1
+clear
+echo -e '\e[91m 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M EF00 W Y\e[0m'
+gdisk /dev/sda
+clear
+echo -e '\e[91m 2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G 8200 W Y\e[0m'
+gdisk /dev/sda
+clear
+echo -e '\e[91m 3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G 8304 W Y\e[0m'
+gdisk /dev/sda
+clear
+echo -e '\e[91m 4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER 8302 W Y\e[0m'
+gdisk /dev/sda
+clear
+echo -e '\e[92mListo Particionado finalizado\e[0m'
+
+# FORMATEAR PARTICIONES
 echo -e '\e[92Formateando TODAS las particiones\e[0m'
 sleep 1
 mkfs.fat -F32 /dev/sda1
@@ -55,13 +89,12 @@ echo -e '\e[92mrecordamos que SWAP ya fue marcado ON\e[0m'
 echo -e '\e[92mSi este programa se para tras unos instantes y apareces logeado como root\e[0m'
 echo -e '\e[92mEntonces tu instalacion esta apunto de terminar. unicamente deberas ejecutar install-2.sh\e[0m'
 sleep 5
-chmod +x install2.sh
-mv install2.sh /mnt
-pacstrap /mnt
+chmod +x install2.sh # Movemos y damos permisos para ejecutar esto en caso necesario.
+mv install2.sh /mnt  # Movemos y damos permisos para ejecutar esto en caso necesario.
+pacstrap /mnt        # Descarga el sistema base y la instala.
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 arch-chroot /mnt /bin/bash
-
 #################################################
 ## Configuracion del S.O Basico
 ################################################
@@ -78,7 +111,7 @@ echo NStation > /etc/hostname
 ##Marcamos la maquina como NStation(PuedeCambiarse)
 ### Creacion de usuario SIN PERMISOS ROOT.
 echo -e '\e[91mCreando un Usuario\e[0m'
-echo -e '\e[92mPor defecto voy a crear a Niil\e[0m'
+echo -e '\e[92mPor defecto voy a crear a niil\e[0m'
 useradd -m niil
 passwd niil
 echo -e '\e[91mContraseña root\e[0m'

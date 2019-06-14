@@ -14,7 +14,7 @@ echo NStation > /etc/hostname
 ##Marcamos la maquina como NStation(PuedeCambiarse)
 ### Creacion de usuario SIN PERMISOS ROOT.
 echo -e '\e[91mCreando un Usuario\e[0m'
-echo -e '\e[92mPor defecto voy a crear a Niil\e[0m'
+echo -e '\e[92mPor defecto voy a crear a niil\e[0m'
 useradd -m niil
 passwd niil
 echo -e '\e[91mContraseña root\e[0m'
