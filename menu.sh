@@ -6,9 +6,9 @@ show_menu(){
     RED_TEXT=`echo "\033[31m"`
     ENTER_LINE=`echo "\033[33m"`
     echo -e "${MENU}********************NIIL78*******************${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 1)${MENU} ArchLinux Basico ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 2)${MENU} ArchLinux + App  ${NORMAL}"
-    echo -e "${MENU}**${NUMBER} 3)${MENU} Solo aplicaciones${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 1)${MENU} RE-Instalacion ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 2)${MENU} Instalacion Nueva  ${NORMAL}"
+    echo -e "${MENU}**${NUMBER} 3)${MENU} Extras${NORMAL}"
     echo -e "${MENU}*********************************************${NORMAL}"
     echo -e "${ENTER_LINE}Selecciona una opcion del menu ${RED_TEXT}O largate. ${NORMAL}"
     read opt
@@ -29,23 +29,24 @@ while [ opt != '' ]
     else
         case $opt in
         1) clear;
-        option_picked "ArchLinux Basico";
-        chmod +x arch-Easy.sh;
-        chmod +x arch_basic-install.sh;
-        sh arch-Easy.sh;
+        option_picked "RE-Instalacion";
+        chmod +x InstalacionSinFormatear/install.sh;
+        chmod +x InstalacionSinFormatear/install-2.sh;
+        sh InstalacionSinFormatear/install.sh;
         #show_menu;
         ;;
         2) clear;
-        option_picked "ArchLinux Completo";
-        chmod +x arch-Easy.sh;
-        chmod +x arch_full-install.sh;
-        sh arch-Easy.sh;
+        option_picked "Instalacion Nueva";
+        chmod +x InstalacionNueva/install-F.sh;
+        chmod +x InstalacionNueva/install-2.sh;
+        sh InstalacionNueva/install-F.sh;
         #show_menu;
         ;;
         3) clear;
-        option_picked "Solo Aplicaciones";
-        chmod +x Aplicaciones/app_gestores.sh;
-        sh Aplicaciones/app_gestores;
+        option_picked "Extras";
+        chmod +x Extras/Aplicaciones.sh;
+        chmod +x Extras/Gestores.sh;
+        sh Extras/Gestores.sh && sh Extras/Aplicaciones.sh;
         show_menu;
             ;;
         x)exit;
