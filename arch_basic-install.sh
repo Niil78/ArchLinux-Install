@@ -6,13 +6,13 @@ echo NStation > /etc/hostname
 #
 #USUARIO
 #
-echo -e 'Default \e[91mCreando un Usuario'
-echo -e 'Por defecto voy a crear a pepe'
-useradd -m pepe
-passwd pepe
-echo -e 'Default \e[91mContraseña root'
+echo -e 'Default \e[91mCreando un Usuario\e[0m'
+echo -e '\e[92mPor defecto voy a crear a pepe\e[0m'
+useradd -m niil
+passwd niil78
+echo -e 'Default \e[91mContraseña root\e[0m'
 passwd
-echo -e 'Default \e[91mConfiguracion basica minima lista'
+echo -e 'Default \e[91mConfiguracion basica minima lista\e[0m'
 #
 #KDE - PLASMA - INSTALACION
 #
