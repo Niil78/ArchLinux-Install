@@ -57,11 +57,11 @@ echo -e '\e[92mrecordamos que SWAP ya fue marcado ON\e[0m'
 echo -e '\e[92mSi este programa se para tras unos instantes y apareces logeado como root\e[0m'
 echo -e '\e[92mEntonces tu instalacion esta apunto de terminar. unicamente deberas ejecutar install-2.sh\e[0m'
 sleep 5
-cp install2.sh /mnt
-chmod +x /mnt/install2.sh
 pacstrap /mnt
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
+chmod +x /mnt/install2.sh
+cp install2.sh /mnt
 arch-chroot /mnt /bin/bash
 
 # #################################################
