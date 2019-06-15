@@ -1,0 +1,11 @@
+
+## Generado el 15-06-2019
+## Niil78
+## Spain
+#Server = http://ftp.rediris.es/mirror/archlinux/$repo/os/$arch
+## Spain
+#Server = http://osl.ugr.es/archlinux/$repo/os/$arch
+## Spain
+#Server = https://mirror.librelabucm.org/archlinux/$repo/os/$arch
+## Spain
+#Server = http://mirror.librelabucm.org/archlinux/$repo/os/$arch
