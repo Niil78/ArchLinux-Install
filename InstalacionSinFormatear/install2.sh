@@ -32,6 +32,7 @@ umount -R /mnt
 lsblk
 swapoff /dev/sda2
 echo -e '\e[92mel swap tambien\e[0m'
+exit 
 chmod +x Fin.sh
 sh Fin.sh
 sleep 1
