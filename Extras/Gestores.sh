@@ -18,7 +18,7 @@ echo -e 'Comenzamos la descarga de YAY y su instalacion'
 sleep 1
 git clone https://aur.archlinux.org/yay.git
 cd yay
-sudo makepkg -si
+makepkg -si
 yay -Syu
 cd ..
 echo -e 'Yay instalado correctamente'
@@ -29,7 +29,7 @@ clear
 # https://github.com/kitsunyan/pakku
 git clone https://aur.archlinux.org/pakku.git
 cd pakku
-sudo makepkg -si
+makepkg -si
 pakku -Syu
 cd ..
 echo -e 'Pakku instalado correctamente'
