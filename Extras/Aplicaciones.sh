@@ -16,7 +16,7 @@ sudo pacman -Syyu --noconfirm p7zip unrar tar rsync ark  thunar
 clear
 # Arduino y otras herramientas
 echo -e 'Arduino y otras herramientas'
-sudo pacman -S --noconfirm notepadqq mtpfs kio-mtp atom arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core atom openvpn
+sudo pacman -S --noconfirm notepadqq mtpfs atom arduino arduino-builder arduino-docs arduino-cli arduino-ctags arduino-avr-core atom openvpn
 echo -e 'Bluetooth y otras'
 sudo pacman -S --noconfirm bluez bluedevil bluez-utils pulseaudio-bluetooth
 clear

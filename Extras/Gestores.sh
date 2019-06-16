@@ -4,9 +4,9 @@
 echo -e 'GESTORES'
 sleep 1
 echo -e 'Instalacion dependencias previas'
-pacman -Qg base-devel
+sudo pacman -Qg base-devel
 sleep 1
-pacman -S --noconfirm git base-devel
+sudo pacman -S --noconfirm git base-devel
 echo -e 'Vamos a instalar unos gestores de paquetes'
 echo -e 'Funcionan exactamente igual que pacman'
 echo -e 'Puedes instalar paquetes desde AUR mas facil'
@@ -46,13 +46,12 @@ pakku -Syu && pakku -S suricata
 ## Instalacion de aplicaciones por el Gestor de paquetes YAY
 ## Archivo en construccion
 echo -e 'Bienvenido a la instalacion de paquetes asistida'
-echo -e 'Discord'
-yay -Syu && yay -S discord
-echo -e 'Discord instalado'
+echo -e 'Comunicaciones & otras'
+yay -Syu && yay -S discord linphone sipp esniper
 echo -e 'Otras'
-yay -S linphone sipp esniper
+# yay -S
 echo -e '3D'
-#yay -S brlcad freecad
+#yay -S brlcad freecad ##Tarda mucho
 echo -e 'github-desktop'
 yay -S github-desktop
 echo -e 'anonimato y privacidad'
