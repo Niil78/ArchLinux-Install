@@ -27,7 +27,7 @@ clear
 echo -e '\e[92mListamos los discos duros\e[0m'
 lsblk
 # Crear particiones nuevas
-echo -e '\e[91mLlego la hora de particionar\e[0m'
+read -p '\e[91mLlego la hora de particionar\e[0m'
 echo -e '/dev/sda[120GB]'
 echo -e '/dev/sda -> /boot[512M]'
 echo -e '/dev/sda -> /swap[4G]'
