@@ -30,27 +30,64 @@ sleep 1
 clear
 echo -e '\e[92mListamos los discos duros\e[0m'
 lsblk
+pause 2
+############################
+###VARIABLE v0.01###########
+#########BOOT###############
+clear
+echo "Selecciona una particion como boot)"
+read boot
+echo "Seleccionado como  $boot..."
+############################
+
+############################
+###VARIABLE v0.01###########
+#########SWAP###############
+clear
+echo "Selecciona una particion como swap"
+read swap
+echo "Seleccionado como  $swap..."
+############################
+
+############################
+###VARIABLE v0.01###########
+#########ROOT###############
+clear
+echo "Selecciona una particion como root"
+read root
+echo "Seleccionado como  $root..."
+############################
+
+############################
+###VARIABLE v0.01###########
+#########HOME###############
+clear
+echo "Selecciona una particion como home"
+read home
+echo "Seleccionado como  $home..."
+############################
+
 echo -e '\e[92Formateando TODAS las particiones\e[0m'
 sleep 1
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F32 $boot
 echo -e '\e[92m/boot - formateado\e[0m'
-mkswap /dev/sda2
+mkswap $swap
 echo -e '\e[92m/swap - formateado\e[0m'
-swapon /dev/sda2
+swapon $swap
 echo -e '\e[92m/SWAP ON\e[0m'
-mkfs.ext4 /dev/sda3
+mkfs.ext4 $root
 echo -e '\e[92m/root - formateado\e[0m'
-mkfs.ext4 /dev/sda4
+mkfs.ext4 $home
 echo -e '\e[92m/home - formateado\e[0m'
 echo -e '\e[92mFormatos listos\e[0m'
 echo -e '\e[92mMontando particiones\e[0m'
-mount /dev/sda3 /mnt
+mount $root /mnt
 echo -e '\e[92m/root - listo\e[0m'
 mkdir -p /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount $boot /mnt/boot
 echo -e '\e[92m/boot - listo\e[0m'
 mkdir -p /mnt/home
-mount /dev/sda4 /mnt/home
+mount $home /mnt/home
 echo -e '\e[92m/home - listo\e[0m'
 echo -e '\e[92mrecordamos que SWAP ya fue marcado ON\e[0m'
 #Iniciar instalacion base
