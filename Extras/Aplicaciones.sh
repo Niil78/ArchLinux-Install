@@ -22,7 +22,7 @@ sudo pacman -S --noconfirm arpwatch ettercap-gtk hydra nikto lynis sqlmap iptraf
 #Navegadores
 sudo pacman -S --noconfirm firefox opera chromium
 #Chats
-sudo pacman -S --noconfirm weechat teamspeak
+sudo pacman -S --noconfirm weechat teamspeak3
 
 # Herramientas basicas
 sudo pacman -S --noconfirm terminator screen filezilla  ksystemlog libreoffice inkscape ntop htop tcpdump steghide
