@@ -1,7 +1,7 @@
 #KDE PLASMA
-echo -e 'KDE&SDDM'
-pacman -Syu --noconfirm plasma plasma-meta sddm
-systemctl enable sddm
+#echo -e 'KDE&SDDM'
+#pacman -Syu --noconfirm plasma plasma-meta sddm
+#systemctl enable sddm
 #systemctl restart sddm
 #Descomentar si se usa tras la instalacion y no durante.
 ##
@@ -24,10 +24,14 @@ clear
 echo -e 'Seguridad informatica & otras'
 sudo pacman -S --noconfirm rclone aircrack-ng wireshark-gtk veracrypt john nmap tor
 sudo pacman -S --noconfirm arpwatch ettercap-gtk hydra nikto lynis sqlmap iptraf-ng
+#Navegadores
+sudo pacman -S --noconfirm firefox opera chromium
+#Chats
+sudo pacman -S --noconfirm weechat teamspeak
+
 # Herramientas basicas
 echo -e 'Herramientas basicas'
-sudo pacman -S --noconfirm terminator screen filezilla  ksystemlog libreoffice firefox opera
-sudo pacman -S --noconfirm weechat teamspeak inkscape ntop htop tcpdump steghide
+sudo pacman -S --noconfirm terminator screen filezilla  ksystemlog libreoffice inkscape ntop htop tcpdump steghide
 sudo pacman -S --noconfirm kdeconnect ifuse teamviewer
 sudo pacman -S --noconfirm kdesdk-thumbnailers kdf sweeper cbatticon
 sudo pacman -S --noconfirm ardour pacmatic
