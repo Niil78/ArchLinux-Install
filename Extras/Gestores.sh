@@ -41,20 +41,15 @@ echo -e 'Finalizado'
 ## Instalacion de aplicaciones por el Gestor de paquetes Pakku
 ## Archivo en construccion
 echo -e 'Bienvenido a la instalacion de paquetes asistida'
-pakku -Syu && pakku -S suricata
+pakku -Syu --noconfirm  && pakku -S --noconfirm  suricata
 ###############################################################
 ## Instalacion de aplicaciones por el Gestor de paquetes YAY
 ## Archivo en construccion
 echo -e 'Bienvenido a la instalacion de paquetes asistida'
 echo -e 'Comunicaciones & otras'
-yay -Syu && yay -S discord linphone sipp esniper
+yay -Syu --noconfirm  && yay -S --noconfirm  discord linphone sipp esniper
 echo -e 'Otras'
 # yay -S
-echo -e '3D'
+#echo -e '3D'
 #yay -S brlcad freecad ##Tarda mucho
-echo -e 'github-desktop'
-yay -S github-desktop
-echo -e 'anonimato y privacidad'
-yay -S tor-browser-en mat tiger
-echo -e 'ofensivo defensivo'
-yay -S beef websploit katana
+yay -S --noconfirm  github-desktop tor-browser-en mat tiger websploit katana tizonia 
