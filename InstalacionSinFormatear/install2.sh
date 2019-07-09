@@ -20,6 +20,10 @@ passwd niil
 echo -e '\e[91mContraseña root\e[0m'
 passwd
 echo -e '\e[91mConfiguracion basica minima lista\e[0m'
+# Nvdia Drivers
+wget http://es.download.nvidia.com/XFree86/Linux-x86_64/430.26/NVIDIA-Linux-x86_64-430.26.run
+chmod +x NVIDIA-Linux-x86_64-430.26.run
+./NVIDIA-Linux-x86_64-430.26.run
 #KDE - Plasma
 pacman -Syu --noconfirm plasma plasma-meta sddm
 systemctl enable sddm
