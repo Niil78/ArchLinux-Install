@@ -36,36 +36,34 @@ pause 2
 #########BOOT###############
 clear
 echo "Selecciona una particion como boot)"
+lsblk
 read boot
 echo "Seleccionado como  $boot..."
-############################
-
-############################
-###VARIABLE v0.01###########
-#########SWAP###############
+###########################
 clear
 echo "Selecciona una particion como swap"
+lsblk
 read swap
 echo "Seleccionado como  $swap..."
 ############################
-
-############################
-###VARIABLE v0.01###########
-#########ROOT###############
 clear
 echo "Selecciona una particion como root"
+lsblk
 read root
 echo "Seleccionado como  $root..."
 ############################
-
-############################
-###VARIABLE v0.01###########
-#########HOME###############
 clear
 echo "Selecciona una particion como home"
+lsblk
 read home
 echo "Seleccionado como  $home..."
 ############################
+pause 1
+echo "/boot $boot"
+echo "/swap $swap"
+echo "/root $root"
+echo "/home $home"
+read -p "toque para continuar si todo esta correcto"
 
 echo -e '\e[92Formateando TODAS las particiones\e[0m'
 sleep 1
@@ -97,8 +95,8 @@ sleep 5
 pacstrap /mnt
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
-chmod +x /mnt/install2.sh
 cp install2.sh /mnt
+chmod +x /mnt/install2.sh 
 arch-chroot /mnt /bin/bash
 
 # #################################################

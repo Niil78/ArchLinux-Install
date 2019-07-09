@@ -2,6 +2,17 @@
 ## GESTORES
 ##
 echo -e 'GESTORES'
+
+#########################
+# Tramite inicial       #
+#########################
+echo -e "para el siguiente proceso se necesita un usuario NO ROOT que tenga permisos sudo. Iniciaremos el proceso de editaar con nano el archivo sudoers, y despues se te pedira el nombre de usuario para cambiar a dicho usuario"
+su root && nano /etc/sudoers && exit
+echo -e 'Ahora necesitaremos cambiar al usuario con poderes para poder proceder con la instalacion.'
+echo -e 'escriba su usuario:'
+read user
+su $user
+########################
 sleep 1
 echo -e 'Instalacion dependencias previas'
 sudo pacman -Qg base-devel
@@ -52,4 +63,4 @@ echo -e 'Otras'
 # yay -S
 #echo -e '3D'
 #yay -S brlcad freecad ##Tarda mucho
-yay -S --noconfirm  github-desktop tor-browser-en mat tiger websploit katana tizonia 
+yay -S --noconfirm  github-desktop tor-browser-en mat tiger websploit katana tizonia

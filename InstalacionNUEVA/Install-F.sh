@@ -12,6 +12,8 @@ timedatectl set-ntp true
 timedatectl status
 sleep 2
 nano /etc/pacman.conf
+mv mirrors /etc/pacman.d/mirrorlist
+echo -e 'mirrors sustituidas'
 nano /etc/pacman.d/mirrorlist
 echo -e '\e[92mConfirmamos version EFI\e[0m'
 ls /sys/firmware/efi/efivars
@@ -26,10 +28,19 @@ sleep 1
 clear
 echo -e '\e[92mListamos los discos duros\e[0m'
 lsblk
+############################
+###VARIABLE v0.01###########
+#########BOOT###############
+clear
+echo "Selecciona una particion como boot)"
+lsblk
+read disk "/dev/"
+echo "Seleccionado como  $disk ..."
+###########################
 # Crear particiones nuevas
 read -p '\e[91mLlego la hora de particionar\e[0m'
 echo -e '/dev/sda[120GB]'
-echo -e '/dev/sda -> /boot[512M]'
+echo -e '$disk -> /boot[512M]'
 echo -e '/dev/sda -> /swap[4G]'
 echo -e '/dev/sda -> /root[50G]'
 echo -e '/dev/sda -> /Home[resto]'
@@ -44,45 +55,75 @@ echo -e 'y (Para aceptar los cambios y luego ENTER)'
 sleep 3
 echo -e 'Crear particion GPT'
 echo -e 'Pulsa estas teclas O-Y-W-Y para crear una particon GPT'
-gdisk /dev/sda
+gdisk $disk
 sleep 1
 clear
 echo -e '\e[91m 1º particion /boot[512M] TIPO: EF00 /> N ENTER ENTER +512M EF00 W Y\e[0m'
-gdisk /dev/sda
+gdisk $disk
 clear
 echo -e '\e[91m 2º particion /swap[4G] TIPO: 8200 /> N ENTER ENTER +4G 8200 W Y\e[0m'
-gdisk /dev/sda
+gdisk $disk
 clear
 echo -e '\e[91m 3º particion /root[50G] TIPO: 8304  /> N ENTER ENTER +50G 8304 W Y\e[0m'
-gdisk /dev/sda
+gdisk $disk
 clear
 echo -e '\e[91m 4º particion /home TIPO: 8302 /> N ENTER ENTER ENTER 8302 W Y\e[0m'
-gdisk /dev/sda
+gdisk $disk
 clear
-echo -e '\e[92mListo Particionado finalizado\e[0m'
+read -p '\e[92mListo Particionado finalizado\e[0m'
+
+############################
+###VARIABLE v0.01###########
+#########BOOT###############
+clear
+echo "Selecciona una particion como boot)"
+lsblk
+read boot
+###########################
+clear
+echo "Selecciona una particion como swap"
+lsblk
+read swap
+############################
+clear
+echo "Selecciona una particion como root"
+lsblk
+read root
+############################
+clear
+echo "Selecciona una particion como home"
+lsblk
+read home
+############################
+sleep 1
+echo  "/boot $boot"
+echo "/swap $swap"
+echo "/root $root"
+echo "/home $home"
+read -p "toque para continuar"
 
 # FORMATEAR PARTICIONES
 echo -e '\e[92Formateando TODAS las particiones\e[0m'
 sleep 1
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F32 $boot
 echo -e '\e[92m/boot - formateado\e[0m'
-mkswap /dev/sda2
+mkswap $swap
 echo -e '\e[92m/swap - formateado\e[0m'
-swapon /dev/sda2
+swapon $swap
 echo -e '\e[92m/SWAP ON\e[0m'
-mkfs.ext4 /dev/sda3
+mkfs.ext4 $root
 echo -e '\e[92m/root - formateado\e[0m'
-mkfs.ext4 /dev/sda4
+mkfs.ext4 $home
 echo -e '\e[92m/home - formateado\e[0m'
 echo -e '\e[92mFormatos listos\e[0m'
 echo -e '\e[92mMontando particiones\e[0m'
-mount /dev/sda3 /mnt
+mount $root /mnt
 echo -e '\e[92m/root - listo\e[0m'
 mkdir -p /mnt/boot
-mount /dev/sda1 /mnt/boot
+mount $boot /mnt/boot
 echo -e '\e[92m/boot - listo\e[0m'
 mkdir -p /mnt/home
-mount /dev/sda4 /mnt/home
+mount $home /mnt/home
 echo -e '\e[92m/home - listo\e[0m'
 echo -e '\e[92mrecordamos que SWAP ya fue marcado ON\e[0m'
 #Iniciar instalacion base

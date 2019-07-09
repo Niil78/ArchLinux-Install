@@ -3,7 +3,7 @@ sleep 1
 lsblk
 umount -R /mnt
 lsblk
-swapoff /dev/sda2
+swapoff $swap
 echo -e 'el swap tambien'
 sleep 1
 reboot
