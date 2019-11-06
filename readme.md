@@ -1,14 +1,10 @@
-instalacion atomatizada arch linux.                      
-La configuración esta básicamente puesta para mi laptop        
-aconsejo leer el código de particiones.sh                  
-para poder configurarlo a tu gusto.                              
-Uso libre para todo el mundo.
-
 | CARPETAS                   | UTILIDAD                              | DURACION |
 | ---------------------------|:-------------------------------------:| --------:|
-| InstalacionSinFormatear    | Sobre Escribe una instalacion pasada  | 1Hora    |
-| InstalacionNueva           | Instalacion Completa nueva.           | 1.5Horas |
+| InstalacionSinFormatear    | Incia  sin crear particiones          | 1Hora    |
+| InstalacionNueva           | Inicia creando particiones.           | 1.5Horas |
 | Extras                     | Instalación Gestores&Herramientas     | 1/2Horas |
+
+Last update -  Nov 2019
 
 <h1>MirrorsList</h1>
 Los mirrors han sido modificados.
