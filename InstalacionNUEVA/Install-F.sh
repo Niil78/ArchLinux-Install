@@ -34,16 +34,16 @@ lsblk
 clear
 echo "Selecciona una particion como boot)"
 lsblk
-read disk "/dev/"
+read disk 
 echo "Seleccionado como  $disk ..."
 ###########################
 # Crear particiones nuevas
 read -p '\e[91mLlego la hora de particionar\e[0m'
-echo -e '/dev/sda[120GB]'
-echo -e '$disk -> /boot[512M]'
-echo -e '/dev/sda -> /swap[4G]'
-echo -e '/dev/sda -> /root[50G]'
-echo -e '/dev/sda -> /Home[resto]'
+echo -e '/dev/sdX[120GB]'
+echo -e '/dev/sdX1 -> /boot[512M]'
+echo -e '/dev/sdX2 -> /swap[4G]'
+echo -e '/dev/sdX3 -> /root[50G]'
+echo -e '/dev/sdX4 -> /Home[resto]'
 sleep 1
 echo -e 'n (Crea una nueva partición)'
 echo -e 'Dejar número de la partición por defecto, presionando ENTER'
@@ -101,7 +101,8 @@ echo "/swap $swap"
 echo "/root $root"
 echo "/home $home"
 read -p "toque para continuar"
-
+sleep 1
+clear
 # FORMATEAR PARTICIONES
 echo -e '\e[92Formateando TODAS las particiones\e[0m'
 sleep 1
