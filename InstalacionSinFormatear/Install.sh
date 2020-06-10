@@ -30,12 +30,12 @@ sleep 1
 clear
 echo -e '\e[92mListamos los discos duros\e[0m'
 lsblk
-pause 2
+sleep 1
 ############################
 ###VARIABLE v0.01###########
 #########BOOT###############
 clear
-echo "Selecciona una particion como boot)"
+echo "Selecciona una particion como boot"
 lsblk
 read boot
 echo "Seleccionado como  $boot..."
@@ -58,27 +58,31 @@ lsblk
 read home
 echo "Seleccionado como  $home..."
 ############################
-pause 1
+sleep 1
 echo "/boot $boot"
 echo "/swap $swap"
 echo "/root $root"
 echo "/home $home"
 read -p "toque para continuar si todo esta correcto"
-
-echo -e '\e[92Formateando TODAS las particiones\e[0m'
+clear
 sleep 1
+echo -e '\e[92Formateando TODAS las particiones\e[0m'
+sleep 2
 mkfs.fat -F32 $boot
 echo -e '\e[92m/boot - formateado\e[0m'
+sleep 1
 mkswap $swap
 echo -e '\e[92m/swap - formateado\e[0m'
 swapon $swap
 echo -e '\e[92m/SWAP ON\e[0m'
+sleep 1
 mkfs.ext4 $root
 echo -e '\e[92m/root - formateado\e[0m'
 mkfs.ext4 $home
 echo -e '\e[92m/home - formateado\e[0m'
 echo -e '\e[92mFormatos listos\e[0m'
 echo -e '\e[92mMontando particiones\e[0m'
+sleep 1
 mount $root /mnt
 echo -e '\e[92m/root - listo\e[0m'
 mkdir -p /mnt/boot
@@ -88,15 +92,19 @@ mkdir -p /mnt/home
 mount $home /mnt/home
 echo -e '\e[92m/home - listo\e[0m'
 echo -e '\e[92mrecordamos que SWAP ya fue marcado ON\e[0m'
-#Iniciar instalacion base
+## Iniciar instalacion base
 echo -e '\e[92mSi este programa se para tras unos instantes y apareces logeado como root\e[0m'
 echo -e '\e[92mEntonces tu instalacion esta apunto de terminar. unicamente deberas ejecutar install-2.sh\e[0m'
-sleep 5
+sleep 2
 pacstrap /mnt
+sleep 1
 genfstab -U /mnt >> /mnt/etc/fstab
+sleep 1
 cat /mnt/etc/fstab
 cp install2.sh /mnt
-chmod +x /mnt/install2.sh 
+chmod +x /mnt/install2.sh
+sleep 2
+echo -e 'Pasamos a entorno chroot'
 arch-chroot /mnt /bin/bash
 
 # #################################################
