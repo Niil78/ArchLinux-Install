@@ -32,7 +32,7 @@ lsblk
 ###VARIABLE v0.01###########
 #########BOOT###############
 clear
-echo "Selecciona una particion como boot)"
+echo "Selecciona un disco para instalar el sistema"
 lsblk
 read disk 
 echo "Seleccionado como  $disk ..."
