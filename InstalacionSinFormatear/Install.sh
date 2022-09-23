@@ -14,7 +14,6 @@ timedatectl set-ntp true
 timedatectl status
 sleep 2
 nano /etc/pacman.conf
-mv mirrors /etc/pacman.d/mirrorlist
 echo -e 'mirrors sustituidas'
 nano /etc/pacman.d/mirrorlist
 echo -e '\e[92mConfirmamos version EFI\e[0m'
