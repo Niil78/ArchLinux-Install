@@ -1,14 +1,14 @@
 | CARPETAS                   | UTILIDAD                              | DURACION |
 | ---------------------------|:-------------------------------------:| --------:|
-| InstalacionSinFormatear    | Incia  sin crear particiones          | 1Hora    |
-| InstalacionNueva           | Inicia creando particiones.           | 1.5Horas |
-| Extras                     | Instalación Gestores&Herramientas     | 1/2Horas |
+|OLD                         | OLD SCRIPT                            |          |
+| OLD/InstalacionSinFormatear| Incia  sin crear particiones          | 1Hora    |
+| OLD/InstalacionNueva       | Inicia creando particiones.           | 1.5Horas |
+| OLD/Extras                 | Instalación Gestores&Herramientas     | 1/2Horas |
+| Tools                      | New Script (IN PROCESS)               |  QUICK   |
 
-Last update -  Nov 2019
+Last update -  SEP 2022
 
-<h1>MirrorsList</h1>
-Los mirrors han sido modificados.
-ESPAÑA,FRANCIA&Portgual Son los mirrors que hay ahora en la instalacion.
+I am reforming the script
 
-<h1>Como usarlo:</h1>
-git clone https://github.com/niil78/ArchLinux-install && chmod +x menu.sh && sh menu.sh
+<h1>How to use it:</h1>
+    (IN PROCESS)
