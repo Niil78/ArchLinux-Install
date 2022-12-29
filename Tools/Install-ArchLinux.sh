@@ -4,7 +4,7 @@ sleep 5
 pacman -S archlinux-keyring
 clear
 
-pacstrap /mnt
+pacstrap /mnt base linux linux-headers linux-zen linux-zen-headers linux-firmware 
 genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 sleep 1
