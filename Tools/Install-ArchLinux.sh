@@ -13,4 +13,4 @@ mv Install-ArchLinux2 /mnt/
 chmod +x /mnt/Install-ArchLinux2.sh
 mv ../EXTRAS/ /mnt/
 sleep 5
-arch-chroot /mnt /bin/bash4
+arch-chroot /mnt /bin/bash
