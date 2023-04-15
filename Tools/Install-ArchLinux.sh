@@ -9,7 +9,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 cat /mnt/etc/fstab
 sleep 1
 echo -e "Continue the installation with the Install-ArchLinux2.sh package."
-mv Install-ArchLinux2 /mnt/
+mv Install-ArchLinux2.sh /mnt/
 chmod +x /mnt/Install-ArchLinux2.sh
 mv ../EXTRAS/ /mnt/
 sleep 5
