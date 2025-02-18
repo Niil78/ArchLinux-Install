@@ -56,6 +56,8 @@ pacman -S --noconfirm i3 i3status dmenu xorg xorg-xinit xorg-server \
     pipewire pipewire-pulse wireplumber nvidia-utils mesa \
     ttf-nerd-fonts-symbols ttf-nerd-fonts ttf-font-awesome wine
 
+paru -Syyu linux-xanmod linux-xanmod-headers
+
 # Instalación de i3lock-fancy-rapid desde AUR
 echo -e "${GREEN} Instalando i3lock-fancy-rapid desde AUR...${RESET}"
 paru -S --noconfirm i3lock-fancy-rapid-git
